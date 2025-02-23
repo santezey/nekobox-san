@@ -101,7 +101,7 @@
                 "AKUN SG WILO 2",
                 "direct"
             ],
-            "tag": "YUMI Internet",
+            "tag": "SANS Internet",
             "type": "urltest",
             "url": "http://connectivitycheck.gstatic.com/generate_204" // punya google
         },
@@ -128,8 +128,8 @@
                 "AKUN SG 2",
                 "AKUN JP 3",
                 "AKUN ID Herza",
-                "AKUN Yumi ID 1",
-                "AKUN Yumi ID 2",
+                "AKUN SANS ID 1",
+                "AKUN SANS ID 2",
                 "WARP SG Nautica",
                 "direct"
             ],
@@ -155,11 +155,11 @@
         {
             "outbounds": [
                 "block",
-                "AKUN Yumi ID 1",
-                "AKUN Yumi ID 2",
+                "AKUN SANS ID 1",
+                "AKUN SANS ID 2",
                 "AKUN ID Herza",
-                "AKUN Yumi ID 3",
-                "Yumi ID" // internet Yumi
+                "AKUN SANS ID 3",
+                "SANS ID" // internet SANS
             ],
             "interrupt_exist_connections": true,
             "tag": "ML-ID",
@@ -299,7 +299,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "Yumi ID",
+            "tag": "SANS ID",
             "type": "vless",
             "server": "nontontv.vidio.com",
             "server_port": 443,
@@ -731,7 +731,7 @@
             "domain_strategy": "ipv4_only"
         },
         {
-            "tag": "AKUN Yumi ID 1",
+            "tag": "AKUN SANS ID 1",
             "type": "trojan",
             "server": "nontontv.vidio.com",
             "server_port": 443,
@@ -756,7 +756,7 @@
             }
         },
         {
-            "tag": "AKUN Yumi ID 2",
+            "tag": "AKUN SANS ID 2",
             "type": "vless",
             "server": "nontontv.vidio.com",
             "server_port": 443,
@@ -827,7 +827,7 @@
             }
         },
         {
-            "tag": "AKUN Yumi ID 3",
+            "tag": "AKUN SANS ID 3",
             "type": "trojan",
             "server": "quiz.int.vidio.com",
             "server_port": 443,
@@ -895,7 +895,7 @@
                     "google",
                     "ubuntu"
                 ],
-                "outbound": "YUMI Internet",
+                "outbound": "SANS Internet",
                 "port": [
                     443
                 ]
