@@ -1,4 +1,4 @@
-// Create BY SANtezey Beta Version 1.1 Feb 2025
+// Create BY MAYUMI V1.3 16 Feb 2025
 {
     "log": {
         "disabled": false,
@@ -93,7 +93,7 @@
         {
             "outbounds": [
                 "Best Latency",
-                "SANS ID",
+                "Yumi ID",
                 "AKUN US 2 Nautica",
                 "AKUN Zeta",
                 "AKUN MY Jrflasher",
@@ -101,7 +101,7 @@
                 "AKUN SG WILO 2",
                 "direct"
             ],
-            "tag": "SANS Internet",
+            "tag": "YUMI Internet",
             "type": "urltest",
             "url": "http://connectivitycheck.gstatic.com/generate_204" // punya google
         },
@@ -128,8 +128,8 @@
                 "AKUN SG 2",
                 "AKUN JP 3",
                 "AKUN ID Herza",
-                "AKUN SANS ID 1",
-                "AKUN SANS ID 2",
+                "AKUN Yumi ID 1",
+                "AKUN Yumi ID 2",
                 "WARP SG Nautica",
                 "direct"
             ],
@@ -155,11 +155,11 @@
         {
             "outbounds": [
                 "block",
-                "AKUN SANS ID 1",
-                "AKUN SANS ID 2",
+                "AKUN Yumi ID 1",
+                "AKUN Yumi ID 2",
                 "AKUN ID Herza",
-                "AKUN SANS ID 3",
-                "SANS ID" // internet SANS
+                "AKUN Yumi ID 3",
+                "Yumi ID" // internet Yumi
             ],
             "interrupt_exist_connections": true,
             "tag": "ML-ID",
@@ -299,7 +299,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "SANS ID",
+            "tag": "Yumi ID",
             "type": "vless",
             "server": "nontontv.vidio.com",
             "server_port": 443,
@@ -731,7 +731,7 @@
             "domain_strategy": "ipv4_only"
         },
         {
-            "tag": "AKUN SANS ID 1",
+            "tag": "AKUN Yumi ID 1",
             "type": "trojan",
             "server": "nontontv.vidio.com",
             "server_port": 443,
@@ -756,7 +756,7 @@
             }
         },
         {
-            "tag": "AKUN SANS ID 2",
+            "tag": "AKUN Yumi ID 2",
             "type": "vless",
             "server": "nontontv.vidio.com",
             "server_port": 443,
@@ -827,7 +827,7 @@
             }
         },
         {
-            "tag": "AKUN SANS ID 3",
+            "tag": "AKUN Yumi ID 3",
             "type": "trojan",
             "server": "quiz.int.vidio.com",
             "server_port": 443,
@@ -877,9 +877,49 @@
                 "outbound": "Proxy"
             },
             {
-                "package_name": [
-                    "com.termux",
-                    "com.mobile.legends"
+                "domain_suffix": [
+                    "akmcdn.ml.youngjoygame.com",
+                    "akmpicture.youngjoygame.com",
+                    "mobilelegends.com",
+                    "ml.aihelp.net",
+                    "report.ml.youngjoygame.com",
+                    "login.ml.youngjoygame.com",
+                    "newlogin.ml.mlbangbang.com",
+                    "newlogin.ml.youngjoygame.com",
+                    "61.moontonsafe.com",
+                    "proxytest89.moonton.org",
+                    "moontonsafe.com"
+                ],
+                "network": "udp",
+                "port": [
+                    53,
+                    443,
+                    30071,
+                    30021,
+                    80,
+                    30190,
+                    5505,
+                    5555,
+                    6789,
+                    2702,
+                    3702,
+                    8443,
+                    9120,
+                    9992,
+                    10003
+                ],
+                "port_range": [
+                    "4001:4009",
+                    "5000:5221",
+                    "5224:5241",
+                    "5243:5287",
+                    "5289:5352",
+                    "5354:5509",
+                    "5517:5529",
+                    "5551:5559",
+                    "5601:5700",
+                    "9000:9010",
+                    "30000:30300"
                 ],
                 "outbound": "ML-ID"
             },
@@ -895,7 +935,7 @@
                     "google",
                     "ubuntu"
                 ],
-                "outbound": "SANS Internet",
+                "outbound": "YUMI Internet",
                 "port": [
                     443
                 ]
@@ -933,7 +973,6 @@
     "experimental": {
         "cache_file": {
             "enabled": true,
-            "path": "../cache/clash.db",
             "store_fakeip": true
         },
         "clash_api": {
