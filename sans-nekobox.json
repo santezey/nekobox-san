@@ -1,4 +1,5 @@
-// Create BY MAYUMI V1.3 16 Feb 2025
+// Create BY MAYUMI V1.4 lite  27 Feb 2025
+// NOte block tidak di pakai lagi pada singbox versi 11
 {
     "log": {
         "disabled": false,
@@ -92,77 +93,32 @@
     "outbounds": [
         {
             "outbounds": [
-                "Best Latency",
-                "Yumi ID",
-                "AKUN US 2 Nautica",
-                "AKUN Zeta",
-                "AKUN MY Jrflasher",
-                "AKUN SG WILO 1",
-                "AKUN SG WILO 2",
-                "direct"
+                "Best Latency", // gunakan untuk akun mu
+                "direct",
+                "PT NEWTON CIPTA INFORMATIKA ID",
+                "Nautica ID",
+                "Amazon.com ID",
+                "Yumi SG",
+                "Akun Tele ID",
+                "Yumi ID"
             ],
-            "tag": "YUMI Internet",
+            "tag": "Internet",
             "type": "urltest",
-            "url": "http://connectivitycheck.gstatic.com/generate_204" // punya google
+            "interval": "1m0s",
+            "url": "http://connectivitycheck.gstatic.com/generate_204" // kalau mau langung di pilih dengan ping terkecil gunakan url test
         },
         {
-            "interval": "1m0s",
             "outbounds": [
-                "AKUN Narakatiket",
-                "AKUN 2",
-                "AKUN 3",
-                "AKUN SG OVH",
-                "AKUN EN Nuclear",
-                "AKUN EN Nautica",
-                "AKUN Canada nautica",
-                "direct"
+                "direct",
+                "block",
+                "PT NEWTON CIPTA INFORMATIKA ID",
+                "Nautica ID",
+                "Amazon.com ID",
+                "Yumi SG",
+                "Akun Tele ID",
+                "Yumi ID"
             ],
             "tag": "Best Latency",
-            "type": "urltest",
-            "url": "https://detectportal.firefox.com/success.txt"
-        },
-        {
-            "interval": "1m0s",
-            "outbounds": [
-                "AKUN SG 1",
-                "AKUN SG 2",
-                "AKUN JP 3",
-                "AKUN ID Herza",
-                "AKUN Yumi ID 1",
-                "AKUN Yumi ID 2",
-                "WARP SG Nautica",
-                "direct"
-            ],
-            "tag": "Internet Mix",
-            "type": "urltest",
-            "url": "https://detectportal.firefox.com/success.txt"
-        },
-        {
-            "type": "selector",
-            "tag": "Proxy",
-            "outbounds": [
-                "WARP SG WILO",
-                "WARP US 1",
-                "WARP SG Nautica",
-                "WARP US 2",
-                "WARP US 3",
-                "WARP US NAUTICA",
-                "AKUN INGGRIS",
-                "block"
-            ],
-            "interrupt_exist_connections": true
-        },
-        {
-            "outbounds": [
-                "block",
-                "AKUN Yumi ID 1",
-                "AKUN Yumi ID 2",
-                "AKUN ID Herza",
-                "AKUN Yumi ID 3",
-                "Yumi ID" // internet Yumi
-            ],
-            "interrupt_exist_connections": true,
-            "tag": "ML-ID",
             "type": "selector"
         },
         {
@@ -181,123 +137,7 @@
             "tag": "dns-out",
             "type": "dns"
         },
-        {
-            "tag": "WARP SG WILO",
-            "type": "trojan",
-            "server": "nontontv.vidio.com",
-            "server_port": 80,
-            "password": "ccb04238-c3b3-4f17-9458-5cafbafb4cdd",
-            "transport": {
-                "type": "ws",
-                "path": "/47.74.254.191-8900",
-                "headers": {
-                    "Host": "wilo.luckystup-id.xyz"
-                }
-            },
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "WARP US NAUTICA",
-            "type": "trojan",
-            "server": "nontontv.vidio.com",
-            "server_port": 80,
-            "password": "4624d2fd-811a-4d5f-b37c-b413d25945f3",
-            "transport": {
-                "type": "ws",
-                "path": "/107.172.6.51-443",
-                "headers": {
-                    "Host": "nautica.foolvpn.me"
-                }
-            },
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "WARP US 1",
-            "type": "trojan",
-            "server": "nontontv.vidio.com",
-            "server_port": 443,
-            "password": "c3774d86-fc3d-4831-930a-d4260cc85dd3",
-            "tls": {
-                "enabled": true,
-                "server_name": "nautica.foolvpn.me",
-                "insecure": true,
-                "disable_sni": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/107.173.171.241-443",
-                "headers": {
-                    "Host": "nautica.foolvpn.me"
-                }
-            },
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "WARP US 2",
-            "type": "vless",
-            "server": "nontontv.vidio.com",
-            "server_port": 443,
-            "tls": {
-                "enabled": true,
-                "server_name": "yumi.yumicftigarun.web.id",
-                "insecure": true,
-                "disable_sni": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/JP75",
-                "headers": {
-                    "Host": "yumi.yumicftigarun.web.id"
-                }
-            },
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "uuid": "368a0630-1188-4bc7-afb3-86b7c7f8f814",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "WARP US 3",
-            "type": "vless",
-            "server": "nontontv.vidio.com",
-            "server_port": 443,
-            "tls": {
-                "enabled": true,
-                "server_name": "yumi.yumicftigarun.web.id",
-                "insecure": true,
-                "disable_sni": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/KR322",
-                "headers": {
-                    "Host": "yumi.yumicftigarun.web.id"
-                }
-            },
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "uuid": "b886f8a7-0ca5-4ba4-9cf5-5ad53855c3e9",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
+        // di sini tempat akun mu
         {
             "tag": "Yumi ID",
             "type": "vless",
@@ -305,440 +145,7 @@
             "server_port": 443,
             "tls": {
                 "enabled": true,
-                "server_name": "joss.gpj.us.kg",
-                "insecure": true,
-                "disable_sni": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/103.168.146.169=20132",
-                "headers": {
-                    "Host": "joss.gpj.us.kg"
-                }
-            },
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "uuid": "f8a76788-9a39-4290-b08c-8d0e7dba8db9",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "type": "trojan",
-            "tag": "AKUN US 2 Nautica",
-            "server": "nontontv.vidio.com",
-            "server_port": 443,
-            "password": "60cca507-6344-47c9-8823-cebdb0a333e7",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "network": "tcp",
-            "tcp_fast_open": false,
-            "tls": {
-                "enabled": true,
-                "server_name": "nautica.foolvpn.me",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/85.209.154.36-443",
-                "headers": {
-                    "host": "nautica.foolvpn.me"
-                }
-            }
-        },
-        {
-            "type": "trojan",
-            "tag": "AKUN Zeta",
-            "server": "nontontv.vidio.com",
-            "server_port": 443,
-            "password": "a0ea392f-7b33-49f0-a34a-b36a349fc41c",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "network": "tcp",
-            "tcp_fast_open": false,
-            "tls": {
-                "enabled": true,
-                "server_name": "cfwaio.proxybox.us.kg",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/192.236.193.108:443",
-                "headers": {
-                    "host": "cfwaio.proxybox.us.kg"
-                }
-            }
-        },
-        {
-            "type": "trojan",
-            "tag": "AKUN MY Jrflasher",
-            "server": "nontontv.vidio.com",
-            "server_port": 443,
-            "password": "89e70cd9-e5d2-4236-9157-2fbb73f71de4",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "network": "tcp",
-            "tcp_fast_open": false,
-            "tls": {
-                "enabled": true,
-                "server_name": "jrflasher.jrmpv.biz.id",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/45.195.76.190:29690",
-                "headers": {
-                    "host": "jrflasher.jrmpv.biz.id"
-                }
-            }
-        },
-        {
-            "tag": "AKUN SG WILO 2",
-            "type": "trojan",
-            "server": "nontontv.vidio.com",
-            "server_port": 80,
-            "password": "ccb04238-c3b3-4f17-9458-5cafbafb4cdd",
-            "transport": {
-                "type": "ws",
-                "path": "/51.79.158.126-443",
-                "headers": {
-                    "Host": "wilo.luckystup-id.xyz"
-                }
-            },
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "AKUN SG WILO 1",
-            "type": "trojan",
-            "server": "nontontv.vidio.com",
-            "server_port": 80,
-            "password": "ccb04238-c3b3-4f17-9458-5cafbafb4cdd",
-            "transport": {
-                "type": "ws",
-                "path": "/47.74.254.191-8900",
-                "headers": {
-                    "Host": "wilo.luckystup-id.xyz"
-                }
-            },
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "domain_strategy": "ipv4_only",
-            "multiplex": {
-                "enabled": false,
-                "max_streams": 32,
-                "protocol": "smux"
-            },
-            "password": "89906e3f-f83d-406c-8eea-b78e98171084",
-            "server": "quiz.int.vidio.com",
-            "server_port": 443,
-            "tag": "AKUN Narakatiket",
-            "tls": {
-                "disable_sni": false,
-                "enabled": true,
-                "insecure": true,
-                "server_name": "aio.narakatiket.workers.dev"
-            },
-            "transport": {
-                "early_data_header_name": "Sec-WebSocket-Protocol",
-                "headers": {
-                    "Host": "aio.narakatiket.workers.dev"
-                },
-                "max_early_data": 0,
-                "path": "/158.178.225.124=37497",
-                "type": "ws"
-            },
-            "type": "trojan"
-        },
-        {
-            "tag": "AKUN 2",
-            "type": "vless",
-            "server": "quiz.int.vidio.com",
-            "server_port": 80,
-            "uuid": "da18c47b-b3af-42df-bea6-3e3f39339ea0",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/192.236.193.108:443",
-                "headers": {
-                    "Host": "cfwaio.proxybox.us.kg"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            },
-            "domain_strategy": "ipv4_only"
-        },
-        {
-            "tag": "AKUN 3",
-            "type": "vless",
-            "server": "quiz.int.vidio.com",
-            "server_port": 80,
-            "uuid": "ae3d2aca-11b4-49c6-8e37-9325dc971df5",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/103.133.223.52-2096",
-                "headers": {
-                    "Host": "nautica.foolvpn.me"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            },
-            "domain_strategy": "ipv4_only"
-        },
-        {
-            "tag": "AKUN SG OVH",
-            "type": "trojan",
-            "server": "nontontv.vidio.com",
-            "server_port": 80,
-            "password": "89e70cd9-e5d2-4236-9157-2fbb73f71de4",
-            "transport": {
-                "type": "ws",
-                "path": "/51.79.158.126:443",
-                "headers": {
-                    "Host": "jrflasher.jrmpv.biz.id"
-                }
-            },
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "type": "trojan",
-            "tag": "AKUN EN Nuclear",
-            "server": "nontontv.vidio.com",
-            "server_port": 443,
-            "password": "b74386c8-5909-4f52-9af6-a4429c2627aa",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "network": "tcp",
-            "tcp_fast_open": false,
-            "tls": {
-                "enabled": true,
-                "server_name": "nuclear.us.kg",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/185.101.96.238:15945",
-                "headers": {
-                    "host": "nuclear.us.kg"
-                }
-            }
-        },
-        {
-            "type": "trojan",
-            "tag": "AKUN EN Nautica",
-            "server": "nontontv.vidio.com",
-            "server_port": 443,
-            "password": "9cfa1dd1-1859-4a94-bada-e074e01d67b5",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "network": "tcp",
-            "tcp_fast_open": false,
-            "tls": {
-                "enabled": true,
-                "server_name": "nautica.foolvpn.me",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/125.7.24.251-443",
-                "headers": {
-                    "host": "nautica.foolvpn.me"
-                }
-            }
-        },
-        {
-            "type": "vless",
-            "tag": "AKUN Canada nautica",
-            "server": "nontontv.vidio.com",
-            "server_port": 80,
-            "uuid": "9624bfe2-625e-4ed9-a05f-839dde8094b3",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tcp_fast_open": false,
-            "tls": {
-                "enabled": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/51.161.134.202-8443",
-                "headers": {
-                    "host": "nautica.foolvpn.me"
-                }
-            },
-            "network": "tcp"
-        },
-        {
-            "type": "vless",
-            "tag": "AKUN ID Herza",
-            "server": "nontontv.vidio.com",
-            "server_port": 443,
-            "uuid": "89e70cd9-e5d2-4236-9157-2fbb73f71de4",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tcp_fast_open": false,
-            "tls": {
-                "enabled": true,
-                "server_name": "jrflasher.jrmpv.biz.id",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/103.168.146.169:20132",
-                "headers": {
-                    "host": "jrflasher.jrmpv.biz.id"
-                }
-            },
-            "network": "tcp"
-        },
-        {
-            "tag": "AKUN JP 3",
-            "type": "vless",
-            "server": "nontontv.vidio.com",
-            "server_port": 80,
-            "uuid": "a75f8e6d-5c14-46a6-b558-7dd206367803",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/149.28.22.198-8443",
-                "headers": {
-                    "Host": "notx.stupx2.my.id"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            },
-            "domain_strategy": "ipv4_only"
-        },
-        {
-            "tag": "AKUN SG 1",
-            "type": "trojan",
-            "server": "nontontv.vidio.com",
-            "server_port": 80,
-            "password": "87200f5e-e33c-428d-8ee0-b795c778de88",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/5.223.49.4-2053",
-                "headers": {
-                    "Host": "multi.2359.us.kg"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            },
-            "domain_strategy": "ipv4_only"
-        },
-        {
-            "tag": "AKUN SG 2",
-            "type": "trojan",
-            "server": "nontontv.vidio.com",
-            "server_port": 80,
-            "password": "49fb69ba-37d5-4c9a-8af2-7b598dc9f3c7",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/101.32.247.126-725",
-                "headers": {
-                    "Host": "sub.gpj.us.kg"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            },
-            "domain_strategy": "ipv4_only"
-        },
-        {
-            "tag": "AKUN Yumi ID 1",
-            "type": "trojan",
-            "server": "nontontv.vidio.com",
-            "server_port": 443,
-            "password": "53c427f1-09b6-477a-8a60-7e36df70d8da",
-            "tls": {
-                "enabled": true,
-                "server_name": "yumi.yumicftigarun.web.id",
+                "server_name": "yumicftigarun.web.id",
                 "insecure": true,
                 "disable_sni": false
             },
@@ -746,7 +153,29 @@
                 "type": "ws",
                 "path": "/ID1",
                 "headers": {
-                    "Host": "yumi.yumicftigarun.web.id"
+                    "Host": "yumicftigarun.web.id"
+                }
+            },
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "uuid": "981efeca-1c7a-46ae-8f9a-5f35f3d30b5e",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "Akun Tele ID",
+            "type": "trojan",
+            "server": "nontontv.vidio.com",
+            "server_port": 80,
+            "password": "aaaaaaa1-bbbb-4ccc-accc-eeeeeeeeeee1",
+            "transport": {
+                "type": "ws",
+                "path": "/Free/TG-at-XionAlva/36.95.152.58-12137",
+                "headers": {
+                    "Host": "free.gegegeming.My.id"
                 }
             },
             "multiplex": {
@@ -756,21 +185,21 @@
             }
         },
         {
-            "tag": "AKUN Yumi ID 2",
+            "tag": "Yumi SG",
             "type": "vless",
             "server": "nontontv.vidio.com",
             "server_port": 443,
             "tls": {
                 "enabled": true,
-                "server_name": "yumi.yumicftigarun.web.id",
+                "server_name": "yumicftigarun.web.id",
                 "insecure": true,
                 "disable_sni": false
             },
             "transport": {
                 "type": "ws",
-                "path": "/ID3",
+                "path": "/SG7",
                 "headers": {
-                    "Host": "yumi.yumicftigarun.web.id"
+                    "Host": "yumicftigarun.web.id"
                 }
             },
             "multiplex": {
@@ -778,35 +207,16 @@
                 "protocol": "smux",
                 "max_streams": 32
             },
-            "uuid": "9d540e93-c089-4020-9560-bb6c6423ab85",
+            "uuid": "b459a924-d01e-41ff-a8db-459f6dd31428",
             "flow": "",
             "packet_encoding": "xudp"
         },
         {
-            "tag": "WARP SG Nautica",
+            "tag": "Amazon.com ID",
             "type": "trojan",
             "server": "nontontv.vidio.com",
-            "server_port": 80,
-            "password": "faf4a955-8438-4afc-85fe-6814f4923489",
-            "transport": {
-                "type": "ws",
-                "path": "/138.2.74.219-28616",
-                "headers": {
-                    "Host": "nautica.foolvpn.me"
-                }
-            },
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "AKUN INGGRIS",
-            "type": "trojan",
-            "server": "quiz.int.vidio.com",
             "server_port": 443,
-            "password": "695cd049-d53a-463c-a44e-2e0c6f8e6615",
+            "password": "8fcefd12-b917-4130-a17b-f9da8650708f",
             "tls": {
                 "enabled": true,
                 "server_name": "nuclear.us.kg",
@@ -815,7 +225,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/130.185.249.22:8080",
+                "path": "/108.136.205.136:443",
                 "headers": {
                     "Host": "nuclear.us.kg"
                 }
@@ -827,11 +237,11 @@
             }
         },
         {
-            "tag": "AKUN Yumi ID 3",
+            "tag": "Nautica ID",
             "type": "trojan",
-            "server": "quiz.int.vidio.com",
+            "server": "nontontv.vidio.com",
             "server_port": 443,
-            "password": "ab573944-eafe-4aa4-bf18-a8be9f9019eb",
+            "password": "b5596e67-bc8d-4dc0-b3be-95966f6b21b9",
             "tls": {
                 "enabled": true,
                 "server_name": "nautica.foolvpn.me",
@@ -840,9 +250,34 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/103.168.146.169-20132",
+                "path": "/203.194.112.119-2053",
                 "headers": {
                     "Host": "nautica.foolvpn.me"
+                }
+            },
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "PT NEWTON CIPTA INFORMATIKA ID",
+            "type": "trojan",
+            "server": "nontontv.vidio.com",
+            "server_port": 443,
+            "password": "02d8d187-9d42-41a7-98e9-c8fc8e000ed5",
+            "tls": {
+                "enabled": true,
+                "server_name": "nuclear.us.kg",
+                "insecure": true,
+                "disable_sni": false
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/103.63.101.10:443",
+                "headers": {
+                    "Host": "nuclear.us.kg"
                 }
             },
             "multiplex": {
@@ -866,79 +301,6 @@
                     "dns-in"
                 ],
                 "outbound": "dns-out"
-            },
-            {
-                "domain_suffix": [
-                    "avtub.net",
-                    "avtubofficial.site",
-                    "sangelink.com.de",
-                    "vstream.id"
-                ],
-                "outbound": "Proxy"
-            },
-            {
-                "domain_suffix": [
-                    "akmcdn.ml.youngjoygame.com",
-                    "akmpicture.youngjoygame.com",
-                    "mobilelegends.com",
-                    "ml.aihelp.net",
-                    "report.ml.youngjoygame.com",
-                    "login.ml.youngjoygame.com",
-                    "newlogin.ml.mlbangbang.com",
-                    "newlogin.ml.youngjoygame.com",
-                    "61.moontonsafe.com",
-                    "proxytest89.moonton.org",
-                    "moontonsafe.com"
-                ],
-                "network": "udp",
-                "port": [
-                    53,
-                    443,
-                    30071,
-                    30021,
-                    80,
-                    30190,
-                    5505,
-                    5555,
-                    6789,
-                    2702,
-                    3702,
-                    8443,
-                    9120,
-                    9992,
-                    10003
-                ],
-                "port_range": [
-                    "4001:4009",
-                    "5000:5221",
-                    "5224:5241",
-                    "5243:5287",
-                    "5289:5352",
-                    "5354:5509",
-                    "5517:5529",
-                    "5551:5559",
-                    "5601:5700",
-                    "9000:9010",
-                    "30000:30300"
-                ],
-                "outbound": "ML-ID"
-            },
-            {
-                "network": [
-                    "udp"
-                ],
-                "geosite": [
-                    "youtube",
-                    "telegram",
-                    "facebook",
-                    "instagram",
-                    "google",
-                    "ubuntu"
-                ],
-                "outbound": "YUMI Internet",
-                "port": [
-                    443
-                ]
             },
             {
                 "port": [
